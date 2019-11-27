@@ -1,0 +1,58 @@
+section{
+    margin: 7vh 7vw;
+    padding:3em;
+    border-radius: .3vw;
+}
+section:first-of-type{
+  margin-top: 0;
+}
+
+/*upcoming events*/
+#upcoming-events{
+    background-color: rgba(255, 255, 255, 0.801);
+}
+
+.upcoming-events h1 {
+    text-align: center;
+    padding-bottom: .5em
+  }
+  .event-card{
+    background-color: rgba(0, 0, 0, 0.479)
+  }
+  .event:hover{
+    background-color: #c70000;
+    color: white;
+    transition: 300ms;
+  }
+  .blank{
+    background-color:  rgba(153, 147, 147, 0.479);
+    color:  rgba(0, 0, 0, 0.479);
+  }
+  .slides{
+      height: 100%;
+  }
+
+  /*about*/
+  #about{
+      background-color: #c70000bd;
+      color:white;
+      text-align: center;
+  }
+
+  .mission-words h1{
+    text-align: left;
+  }
+
+  .mission-words h2{
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    font-style: italic;
+  }
+
+  .mission-words{
+    padding: 0em;
+    color: white;
+  }
+  

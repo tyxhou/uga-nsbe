@@ -1,0 +1,28 @@
+.nsbe-nav{
+
+  }
+  
+.nsbe-nav img{
+    max-height: 80px;
+  }
+  
+.nav-item{
+    padding-left: 20px;
+    color: white;
+  }
+
+  .nav-link p{
+    color: white;
+  }
+
+  a h4{
+    color: #333333;
+  }
+  
+a:hover{
+    color: #C70000;
+    transition: 100ms;
+  }
+.become{
+  color: #C70000;
+}
