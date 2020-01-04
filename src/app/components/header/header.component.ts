@@ -25,6 +25,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  //called from the html, if there is a match in the array held by UsersService, this will
+  //emit(or let the home component know) to the home component that a match was found 
+  //and pass that user along 
+  //if no match, adds no match nssage to html
   signIn(): void{
     this.user = this.userService.attemptLogin(this.myId, this.password);
     if (this.user.fName == "FAIL"){
@@ -37,6 +41,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  //lets home component knoe the user has clicked logout
   logOut(): void{
     this.logout.emit();
   }

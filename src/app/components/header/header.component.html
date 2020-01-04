@@ -23,12 +23,14 @@
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control form-control-lg myId"
                                             placeholder="myId" [(ngModel)] = "myId">
+                                            <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
                                         <input type="password" class="form-control form-control-lg"
                                             placeholder="Password" [(ngModel)] = "password">
+                                            <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
                                     </div>
                                 </div>
                                 <div class="checkbox mb-3">
@@ -37,12 +39,14 @@
                                     </label>
                                 </div>
                                 <button class="btn btn-lg btn-primary btn-block sign-in-button" (click)="signIn()">Sign in</button>
+                                <!-- calls click method in home component when clicked -->
                             </div>
                             <div class="divider"></div>
                             <div class="become-member">
                                 <h3>Want to become a member?</h3>
                                 <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
                                 <a (click)="logOut()" href="">Log Out</a>
+                                <!-- calls click method in home component when clicked -->
                             </div>
                         </div>
                     </div>

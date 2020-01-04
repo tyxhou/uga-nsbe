@@ -34,6 +34,8 @@ export class HomeComponent{
      console.log("Logged In: " + this.loggedIn);
   }
 
+  //called when sign in event is heard from header component, sets necessary info(loggedinuser), saves info to cookies for
+  //half a day, status is now logged in, reloads page
   signIn(user: nsbeUser):void{
     this.loggedInUser = this.userService.setUser(user);
     //check here and use remember me method when implementing remember me on checkbox mark
@@ -42,6 +44,7 @@ export class HomeComponent{
     window.location.reload();
   }
 
+  //called when logout event is heard from header component, deletes cookies, sets status to logged out and clears user info(loggedinuser), reloads page
   logout():void{
     console.log("Logout called");
     this.loggedInUser = null;

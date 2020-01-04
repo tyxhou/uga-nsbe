@@ -1,6 +1,7 @@
 <div id="top"></div>
 <app-nav></app-nav>
 <app-header (signedIn)=signIn($event) (logout)=logout()></app-header>
+<!-- listens for events emmited by header component, calls methods in home component if something is heard -->
 <section id="upcoming-events">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
