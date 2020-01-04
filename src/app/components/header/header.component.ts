@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import {UsersService} from '../../services/users.service'
 import { nsbeUser } from 'src/app/entities/nsbeUser';
+import { HomeComponent } from '../../views/home/home.component';
+import { UserInterface } from '../../interfaces/UserInterface';
 
 
 @Component({
@@ -17,12 +19,23 @@ export class HeaderComponent implements OnInit {
   myId: String = '';
   password: String = '';
   user: nsbeUser;
+  loggedIn: boolean;
+  loggedInUser: UserInterface;
 
-  constructor(private userService:UsersService) { }
+  constructor(private userService:UsersService, private homeComponent: HomeComponent) { }
 
   faArrowDown = faArrowDown;
 
   ngOnInit() {
+    this.setInfoIfLoggedIn()
+  
+  }
+
+  setInfoIfLoggedIn(){
+    this.loggedIn = this.homeComponent.loggedIn.valueOf();
+    if(this.loggedIn){
+      this.loggedInUser = this.homeComponent.loggedInUser
+    }
   }
 
   //called from the html, if there is a match in the array held by UsersService, this will

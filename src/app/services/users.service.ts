@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {nsbeUser} from '../entities/nsbeUser'
-import { loggedInUser } from '../interfaces/loggedInUser';
+import { UserInterface } from '../interfaces/UserInterface';
 
 //This service is used to pass data about the user to and from the components.
 //Eventually this will be the point that is used to connect to the database
@@ -33,9 +33,13 @@ export class UsersService {
     return this.failUser
   }
 
+  public getInfoFromUserObjects(){
+    
+  }
+
   //returns an object with the necessary information to the home component
-  setUser(user: nsbeUser): loggedInUser{
-    var newUser: loggedInUser = {
+  setUser(user: nsbeUser): UserInterface{
+    var newUser: UserInterface = {
       fname: user.fName,
       lname: user.lName,
       email: user.email,

@@ -27,7 +27,7 @@ import { CookieService } from 'ngx-cookie-service';
     FontAwesomeModule,   
     FormsModule
   ],
-  providers: [CookieService],
+  providers: [CookieService, HomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

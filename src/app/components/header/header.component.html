@@ -12,7 +12,7 @@
                     <h2 class="display-3">University of Georgia</h2>
                 </div>
             </div>
-            <div class="col-md-4 sign-in-wrapper">
+            <div *ngIf="!loggedIn; else userHub" class="col-md-4 sign-in-wrapper">
                 <div class="row justify-content-center dummy-row align-items-center">
                     <div class="user-hub sign-in">
                         <div class="row align-items-center">
@@ -21,16 +21,16 @@
                                 <p id="failedAttempt">Your username or password is incorrect</p>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control form-control-lg myId"
-                                            placeholder="myId" [(ngModel)] = "myId">
-                                            <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
+                                        <input type="text" class="form-control form-control-lg myId" placeholder="MyID"
+                                            [(ngModel)]="myId">
+                                        <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
                                         <input type="password" class="form-control form-control-lg"
-                                            placeholder="Password" [(ngModel)] = "password">
-                                            <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
+                                            placeholder="Password" [(ngModel)]="password">
+                                        <!-- ng model binds whatever is in the box to the variable we declared in the home component -->
                                     </div>
                                 </div>
                                 <div class="checkbox mb-3">
@@ -38,21 +38,52 @@
                                         <input type="checkbox" value="remember-me"> Remember me for 2 weeks
                                     </label>
                                 </div>
-                                <button class="btn btn-lg btn-primary btn-block sign-in-button" (click)="signIn()">Sign in</button>
+                                <button class="btn btn-lg btn-primary btn-block sign-in-button" (click)="signIn()">Sign
+                                    in</button>
                                 <!-- calls click method in home component when clicked -->
                             </div>
                             <div class="divider"></div>
                             <div class="become-member">
                                 <h3>Want to become a member?</h3>
                                 <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
-                                <a (click)="logOut()" href="">Log Out</a>
-                                <!-- calls click method in home component when clicked -->
                             </div>
                         </div>
                     </div>
                 </div>
 
             </div>
+            <ng-template #userHub>
+                <div class="col-md-4 sign-in-wrapper">
+                    <div class="user-info">
+                        <h4>Hello,</h4>
+                        <h3 class="first">{{loggedInUser.fname}}</h3>
+                        <div class="points">
+                            <h5>You have</h5>
+                            <h1>{{ loggedInUser.points }}</h1>
+                            <h3>points</h3>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="row user-buttons justify-content-center align-items-center">
+                            <div class="col-md-6">
+                                <div class="row justify-content-center align-items-center">
+                                    <button class="btn btn-lg btn-primary btn-block sign-in-button">Check In</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row justify-content-center align-items-center">
+                                    <button class="btn btn-lg btn-primary btn-block sign-in-button">Edit
+                                        Profile</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div (click)="logOut()" class="row logout justify-content-center align-items-center">
+                            <button class="btn btn-lg btn-danger btn-block sign-in-button">Log Out</button>
+                        </div>
+                        <!-- calls click method in home component when clicked -->
+                    </div>
+                </div>
+            </ng-template>
+
         </div>
         <div class="row justify-content-center explore" id="explore">
             <a href="#upcoming-events" class="bounce">
