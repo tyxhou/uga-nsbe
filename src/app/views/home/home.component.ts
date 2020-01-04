@@ -6,7 +6,7 @@ import { faHandsHelping} from '@fortawesome/free-solid-svg-icons';
 import {UsersService} from '../../services/users.service'
 import { nsbeUser } from 'src/app/entities/nsbeUser';
 import { CookieService } from 'ngx-cookie-service';
-import { loggedInUser } from '../../interfaces/loggedInUser'
+import { UserInterface } from '../../interfaces/UserInterface'
 
 
 
@@ -20,7 +20,7 @@ import { loggedInUser } from '../../interfaces/loggedInUser'
 
 export class HomeComponent{
 
-  loggedInUser: loggedInUser;
+  loggedInUser: UserInterface;
   loggedIn: Boolean;
   
   constructor(private userService:UsersService, private cookieService: CookieService) { }
@@ -62,6 +62,10 @@ export class HomeComponent{
   //use when implementing remember me checkbox
   rememberMe(user: nsbeUser){
     this.cookieService.set("user", JSON.stringify(user), 14);
+  }
+
+  getLoggedInUser(): UserInterface{
+    return this.loggedInUser;
   }
 
 }

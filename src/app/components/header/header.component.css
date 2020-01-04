@@ -148,12 +148,47 @@ height: 1px;
 width: 80%;
 margin-left: auto;
 margin-right: auto;
-background-color: rgba(153, 147, 147, 0.479);
+background-color: rgba(153, 147, 147, 0.678);
 }
 
 @media only screen and (max-width: 767px) {
   .header{
     height: auto;
   }
+}
+
+.user-info{
+  background-color: rgba(255, 255, 255, 0.678);
+  padding: 3em 2em;
+  border-radius: .3vw;  
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+}
+
+.first{
+  color: #007bff;
+  margin-bottom: 1.3em;
+  font-weight: bold;
+}
+
+.points{
+  margin: 2em;
+}
+
+.points h1{
+  font-weight: bold;
+
+}
+
+.user-buttons{
+  margin: 2.5em .5em .5em .5em
+}
+.user-buttons button{
+  margin: .5em
+}
+
+.logout{
+  margin: 0 1em 1em 1em;
 }
 
