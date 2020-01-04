@@ -1,16 +1,42 @@
 section{
     margin: 7vh 7vw;
-    padding:3em;
+    padding: 2.5em;
     border-radius: .3vw;
 }
 section:first-of-type{
   margin-top: 0;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+ }
+ .show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+ }
+
 /*upcoming events*/
 #upcoming-events{
-    background-color: rgba(255, 255, 255, 0.801);
+    /* background-color: rgba(255, 255, 255, 0.801); */
+    padding: 0;
 }
+
+#upcoming-events h3{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.events{
+  background-color: rgba(255, 255, 255, 0.678);
+  padding: 2em;
+  border-radius: .3vw;
+  width: 100%;
+}
+
 
 .upcoming-events h1 {
     text-align: center;
@@ -28,31 +54,222 @@ section:first-of-type{
     background-color:  rgba(153, 147, 147, 0.479);
     color:  rgba(0, 0, 0, 0.479);
   }
-  .slides{
+  .see-all h4{
+    margin-top: 1em;
+    text-align: center;
+  }
+  .see-all a{
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 767px) {
+    .find-out{
+      margin-bottom: 3em;
+    }
+  }
+
+  .user-hub{
       height: 100%;
+      text-align: center;
+      margin-top: 0em;
+  }
+  .user-hub h2{
+    padding-bottom: .4em;
+  }
+  .sign-in{
+    width: 60%;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sign-in .checkbox{
+    margin-top: 1em;
+  }
+  .user-hub h3{
+    margin-left: auto;
+    margin-right: auto;  
+  }
+  .user-hub .sign-in button{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .become-member{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .become-member h3{
+    margin-top: 1em;
+  }
+
+  .become-member button{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .divider{
+    height: 1px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(153, 147, 147, 0.479);
   }
 
   /*about*/
   #about{
-      background-color: #c70000bd;
+      background-color: #c700008c;
       color:white;
       text-align: center;
   }
 
   .mission-words h1{
     text-align: left;
+    max-width: 100%;
+    font-weight: bold;
   }
 
   .mission-words h2{
     text-align: center;
     padding-left: 2em;
     padding-right: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     font-style: italic;
+    font-size: 2em;
   }
 
   .mission-words{
     padding: 0em;
     color: white;
   }
+
+  .icon{
+    font-size: 7em;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
+.about-cards {
+  margin-bottom: 1em;
+}
+
+.about-card{
+  padding-top: 1em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(41, 40, 40);
+  font-weight: bold;
+  border: 0px;
+  text-align: center;
+}
+
+
+.about-card .icon{
+  color: #c70000;
+}
+
+#about .card-title{
+  margin-bottom: 0;
+}
+
+  .about-card .card-footer{
+    background-color: white;
+    border: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+  }
+
+  /*desc-andpics*/
+  #desc-pics{
+    background-color: rgba(255, 255, 255, 0.678);
+    padding: 0;
+  }
+
+  .desc{
+    padding: 3em;
+  }
+
+  .desc-row{
+    margin: 0;
+  }
+
+  .desc h1{
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .desc h3{
+    text-align: center;
+  }
+
+  .desc button{
+    border-radius: 25px;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-desc{  
+    height: 70vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../../../assets/img/IMG_9550.JPG");
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: .3vw;
+    border-bottom-right-radius: .3vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .img-desc{
+      margin-top: 2em;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: .3vw;
+      border-bottom-left-radius: .3vw;
+    }
+  }
+
+  /*contact-row*/
+
+  #contact-us{
+    background-color: #c700008c;
+    color: white;
+    padding: 0;
+  }
+
+  .contact-row{
+    margin:0;
+  }
+
+  .sub-message{
+    width: 100%;
+    border-radius: 25px;
+    padding-top: 8px;
+  }
+
+  .img-cont{  
+    height: 67vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../../../assets/img/stairs.png");
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: .3vw;
+    border-bottom-left-radius: .3vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .img-cont{
+      margin-bottom: 2em;
+      border-top-right-radius: 0;
+      border-top-right-radius: .3vw;
+      border-bottom-left-radius: 0;    }
+  }
+
+  .contact-form{
+    padding: 3em 3em;
+  }

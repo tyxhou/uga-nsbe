@@ -4,46 +4,41 @@
             <img src="../../assets/img/Picture2.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" (click)="scrollToTop()">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">
-                        <p>
-                            Home<span class="sr-only">(current)</span>
-                        </p>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">
-                        <p>
-                            About NSBE
-                        </p>
+                            About NSBE<span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <p>
                             Photos
-                        </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                        <p>
                             Conference
-                        </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link become" href="#">
-                        <p>
+                    <a class="nav-link become" href="#desc-pics">
                             Become a member
-                        </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link become" href="#contact-us">
+                            Contact Us
+                    </a>
+                </li>
+                <!-- <li class="nav-item sign-in">
+                    <a class="nav-link become" href="#upcoming-events">
+                        <fa-icon [icon]="faUser"></fa-icon> &nbsp;&nbsp;Sign In
+                    </a>
+                </li> -->
             </ul>
         </div>
     </div>

@@ -1,0 +1,12 @@
+footer{
+    background-color: rgba(255, 255, 255, 0.774);
+    margin: 0 7vw;
+    border-top-right-radius: .3vw;
+    border-top-left-radius: .3vw;
+    padding: 1em 1em 1em 1em;
+}
+
+.logo{
+    height: 13vh;
+    padding: 1em 1em 3em 1em;
+}

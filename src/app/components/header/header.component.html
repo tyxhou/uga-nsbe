@@ -1,21 +1,60 @@
 <div class="header">
-    <app-nav></app-nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container-fluid">
-            <div class="row justify-content-center logo">
-                <img src="../../../assets/img/illegal.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8">
+                <div class="row justify-content-center logo">
+                    <img src="../../../assets/img/illegal.png">
+                </div>
+                <div class="row justify-content-center title">
+                    <h1 class="display-2">National Society of Black Engineers</h1>
+                </div>
+                <div class="row justify-content-center title">
+                    <h2 class="display-3">University of Georgia</h2>
+                </div>
             </div>
-            <div class="row justify-content-center title">
-                <h1 class="display-2">National Society of Black Engineers</h1>
+            <div class="col-md-4 sign-in-wrapper">
+                <div class="row justify-content-center dummy-row align-items-center">
+                    <div class="user-hub sign-in">
+                        <div class="row align-items-center">
+                            <div class="sign-in-form">
+                                <h2>Sign in</h2>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control form-control-lg email-input" id="colFormLabelLg"
+                                            placeholder="Email">
+                                    </div>
+                                </div>
+                                <!-- <label for="inputPassword" class="sr-only">Password</label>
+                                <input type="password" id="inputPassword" class="form-control pw-input" placeholder="Password"
+                                    required> -->
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input type="password" class="form-control form-control-lg email-input" id="colFormLabelLg"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary btn-block sign-in-button" type="submit">Sign in</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="become-member">
+                                <h3>Want to become a member?</h3>
+                                <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="row justify-content-center title">
-                <h2 class="display-3">University of Georgia</h2>
-            </div>
-            <div class="row justify-content-center explore">
-                <button type="button" class="btn btn-outline-light">
-                    <h3>Explore</h3>
-                </button>
-            </div>
+        </div>
+        <div class="row justify-content-center explore" id="explore">
+            <a href="#upcoming-events" class="bounce">
+                <fa-icon [icon]="faArrowDown"></fa-icon>
+            </a>
         </div>
     </div>
 </div>

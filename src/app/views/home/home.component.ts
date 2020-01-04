@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { faGraduationCap } from '@fortawesome/fontawesome-free';
-import { faBriefcase } from '@fortawesome/fontawesome-free';
-import { faHandsHelping} from '@fortawesome/fontawesome-free';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faHandsHelping} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({

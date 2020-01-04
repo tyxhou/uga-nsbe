@@ -11,18 +11,21 @@
     color: white;
   }
 
-  .nav-link p{
+  .nav-item a{
     color: white;
   }
 
-  a h4{
-    color: #333333;
+  .sign-in a {
+    background-color: #c7000080;
+    border-radius: 40px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .sign-in a:hover {
+    background-color: #c70000;
+    color: white;
+    transition: 500ms;
   }
   
-a:hover{
-    color: #C70000;
-    transition: 100ms;
-  }
-.become{
-  color: #C70000;
-}
+

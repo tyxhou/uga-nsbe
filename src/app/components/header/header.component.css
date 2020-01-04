@@ -1,16 +1,16 @@
-.jumbotron{
-      padding: 0;
-      padding-top: 7vh;
-      padding-bottom: 13vh;
-      background-color: transparent;
-}
 
 .header{
-  height: 100vh;
+  padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .logo img{
-  max-height: 40vh;
+  max-height: 30vh;
+}
+@media only screen and (max-width: 590px) {
+  .logo img{
+    max-height: 15vh;
+  }
 }
 
 .title{
@@ -19,14 +19,136 @@
 }
 
 .title h1{
-  font-size: 5vw;
+  font-size: 3.5vw;
+  font-weight: bold;
 }
 
 .title h2{
   font-size: 3vw;
-  margin-bottom: 3vh
+  margin-bottom: 2vh
 }
 
-.title h3{
-  padding: 0;
+
+@media only screen and (max-width: 767px) {
+  .title h2{
+    margin-bottom: 2em;
+  }
 }
+
+.explore a{
+  margin-top: .8em;
+  color: white;
+  font-size: 4em;
+  transition: 500ms;
+}
+
+.explore a:hover{
+  color: #c70000;
+  transition: 500ms;
+}
+
+.bounce {
+  animation: bounce 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+0%,
+25%,
+50%,
+75%,
+100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-20px);
+}
+60% {
+transform: translateY(-12px);
+}
+}
+
+.sign-in-wrapper{
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0 4em
+}
+
+.sign-in{
+  background-color: rgba(255, 255, 255, 0.678);
+  padding: 3em 2em;
+  border-radius: .3vw;  
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.email-input{
+  margin-bottom: .5em;
+}
+
+.dummy-row{
+  height: 100%;
+}
+
+.user-hub{
+  text-align: center;
+  margin-top: 0em;
+}
+.user-hub h2{
+padding-bottom: .4em;
+}
+.sign-in-form{
+width: 70%;
+margin-bottom: 2em;
+margin-left: auto;
+margin-right: auto;
+}
+.sign-in .checkbox{
+margin-top: 1em;
+}
+
+.sign-in-button{
+  border-radius: 25px;
+}
+
+.user-hub h3{
+margin-left: auto;
+margin-right: auto;  
+}
+.user-hub .sign-in button{
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.become-member{
+margin-left: auto;
+margin-right: auto;
+}
+
+.become-member h3{
+margin-top: 1em;
+}
+
+.become-member button{
+margin-top: 1em;
+width: 60%;
+margin-left: auto;
+margin-right: auto;
+border-radius: 25px;
+}
+
+.divider{
+height: 1px;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+background-color: rgba(153, 147, 147, 0.479);
+}
+
+@media only screen and (max-width: 767px) {
+  .header{
+    height: auto;
+  }
+}
+
