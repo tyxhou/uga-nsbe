@@ -18,32 +18,31 @@
                         <div class="row align-items-center">
                             <div class="sign-in-form">
                                 <h2>Sign in</h2>
+                                <p id="failedAttempt">Your username or password is incorrect</p>
                                 <div class="form-group row">
                                     <div class="col-sm-12">
-                                        <input type="email" class="form-control form-control-lg email-input" id="colFormLabelLg"
-                                            placeholder="Email">
+                                        <input type="text" class="form-control form-control-lg myId"
+                                            placeholder="myId" [(ngModel)] = "myId">
                                     </div>
                                 </div>
-                                <!-- <label for="inputPassword" class="sr-only">Password</label>
-                                <input type="password" id="inputPassword" class="form-control pw-input" placeholder="Password"
-                                    required> -->
                                 <div class="form-group row">
                                     <div class="col-sm-12">
-                                        <input type="password" class="form-control form-control-lg email-input" id="colFormLabelLg"
-                                            placeholder="Password">
+                                        <input type="password" class="form-control form-control-lg"
+                                            placeholder="Password" [(ngModel)] = "password">
                                     </div>
                                 </div>
                                 <div class="checkbox mb-3">
                                     <label>
-                                        <input type="checkbox" value="remember-me"> Remember me
+                                        <input type="checkbox" value="remember-me"> Remember me for 2 weeks
                                     </label>
                                 </div>
-                                <button class="btn btn-lg btn-primary btn-block sign-in-button" type="submit">Sign in</button>
+                                <button class="btn btn-lg btn-primary btn-block sign-in-button" (click)="signIn()">Sign in</button>
                             </div>
                             <div class="divider"></div>
                             <div class="become-member">
                                 <h3>Want to become a member?</h3>
                                 <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
+                                <a (click)="logOut()" href="">Log Out</a>
                             </div>
                         </div>
                     </div>

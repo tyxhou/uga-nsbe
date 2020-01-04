@@ -86,8 +86,13 @@ transform: translateY(-12px);
   margin-bottom: .5em;
 }
 
-.dummy-row{
-  height: 100%;
+#failedAttempt{
+  color: red;
+  display: none;
+}
+
+.fail{
+  display: block !important;
 }
 
 .user-hub{
@@ -95,7 +100,7 @@ transform: translateY(-12px);
   margin-top: 0em;
 }
 .user-hub h2{
-padding-bottom: .4em;
+padding-bottom: .2em;
 }
 .sign-in-form{
 width: 70%;
