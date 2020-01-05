@@ -11,6 +11,12 @@
                 <div class="row justify-content-center title">
                     <h2 class="display-3">University of Georgia</h2>
                 </div>
+                <div *ngIf="loggedIn && loggedInUser.admin" class="row justify-content-center">
+                    <div class="admin">
+                        <button class="btn btn-lg btn-warning btn-block sign-in-button" data-toggle="modal"
+                            data-target="#admin-controls">Admin Controls</button>
+                    </div>
+                </div>
             </div>
             <div *ngIf="!loggedIn; else userHub" class="col-md-4 sign-in-wrapper">
                 <div class="row justify-content-center dummy-row align-items-center">
@@ -63,19 +69,12 @@
                             <h3>points</h3>
                         </div>
                         <div class="divider"></div>
-                        <div class="row user-buttons justify-content-center align-items-center">
-                            <div class="col-md-6">
-                                <div class="row justify-content-center align-items-center">
-                                    <button class="btn btn-lg btn-primary btn-block sign-in-button">Check In</button>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="row justify-content-center align-items-center">
-                                    <button class="btn btn-lg btn-primary btn-block sign-in-button">Edit
-                                        Profile</button>
-                                </div>
-                            </div>
+                        <div class="row justify-content-center align-items-center check-in">
+                            <button class="btn btn-lg btn-primary btn-block sign-in-button">Check In</button>
                         </div>
+                        <div class="row justify-content-center align-items-center edit-profile">
+                            <button class="btn btn-lg btn-primary btn-block sign-in-button">Edit Profile</button>
+                        </div> 
                         <div (click)="logOut()" class="row logout justify-content-center align-items-center">
                             <button class="btn btn-lg btn-danger btn-block sign-in-button">Log Out</button>
                         </div>
@@ -89,6 +88,40 @@
             <a href="#upcoming-events" class="bounce">
                 <fa-icon [icon]="faArrowDown"></fa-icon>
             </a>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="admin-controls" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle">Admin Controls</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div (signedIn)=signIn($event) class="row justify-content-center align-items-center admin-wrapper">
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <h3>Manage Users</h3>
+                    </button>
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <h3>Manage Events</h3>
+                    </button>
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <h3>Manage Executives</h3>
+                    </button>
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <h3>Manage Content</h3>
+                    </button>
+                    <button class="btn btn-lg btn-danger btn-block">
+                        <h3>Logout</h3>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
