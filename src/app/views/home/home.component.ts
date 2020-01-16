@@ -5,7 +5,7 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faHandsHelping} from '@fortawesome/free-solid-svg-icons';
 import { UsersService } from '../../services/users.service'
 import { nsbeUser } from 'src/app/entities/nsbeUser';
-import { UserInterface } from '../../interfaces/UserInterface'
+import { UserInterface } from '../../interfaces-enums/UserInterface'
 
 
 
@@ -29,7 +29,10 @@ export class HomeComponent{
   ngOnInit() { 
     this.userService.loggedIn ?  this.setUser() : this.loggedIn = false;
     if(this.loggedIn)
-      console.log("from: home: " + this.loggedInUser.fname);
+      console.log("user from home: " + this.loggedInUser.fname);
+      else
+      console.log("nobody logged in from home");
+
   }
 
   //called when sign in event is heard from header component, sets necessary info(loggedinuser), saves info to cookies for

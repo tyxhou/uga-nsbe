@@ -1,0 +1,13 @@
+section{
+    margin: 3vh auto 1vh auto;
+    padding: 2.5em;
+    border-radius: .3vw;
+}
+
+#edit-profile{
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+#edit-profile-form{
+    margin-top: 2em;
+}

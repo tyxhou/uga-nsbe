@@ -1,0 +1,254 @@
+<app-nav></app-nav>
+<section class="container" id="execs">
+    <div class="row justify-content-center align-items-center">
+        <h1>2019 - 2020 Executive Board</h1>
+    </div>
+    <div class="row justify-content-center align-items-center exec-row">
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.president.picture)">
+                        <div class="stack-img">
+                            <img src="../../../assets/img/ExecPhotos/isaac.jpeg">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.president.fullName}}</h3>
+                            <h4>President</h4>
+                            <h5 class="card-title">
+                                <span>Classification: </span>
+                                {{execBody.president.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.president.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.viceP.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.viceP.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.viceP.fullName}}</h3>
+                            <h4>Vice President</h4>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Classification: </span>
+                                {{execBody.viceP.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.viceP.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center exec-row">
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.treasurer.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.treasurer.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.treasurer.fullName}}</h3>
+                            <h4>Tresurer</h4>
+                            <h5 class="card-title">
+                                <span>Classification: </span>
+                                {{execBody.treasurer.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.treasurer.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.secretary.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.secretary.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.secretary.fullName}}</h3>
+                            <h4>Secretary</h4>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Classification: </span>
+                                {{execBody.secretary.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.secretary.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center exec-row">
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.parl.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.parl.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.parl.fullName}}</h3>
+                            <h4>Parlimentarian</h4>
+                            <h5 class="card-title">
+                                <span>Classification: </span>
+                                {{execBody.parl.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.parl.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.programs.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.programs.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.programs.fullName}}</h3>
+                            <h4>Programs Chair</h4>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Classification: </span>
+                                {{execBody.programs.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.programs.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center align-items-center exec-row">
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.finChair.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.finChair.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.finChair.fullName}}</h3>
+                            <h4>Finance Chair</h4>
+                            <h5 class="card-title">
+                                <span>Classification: </span>
+                                {{execBody.finChair.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span>Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.finChair.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4" [style.background-image]="getBackground(execBody.memChair.picture)">
+                        <div class="stack-img">
+                            <img src="{{execBody.memChair.picture}}">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{execBody.memChair.fullName}}</h3>
+                            <h4>Programs Chair</h4>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Classification: </span>
+                                {{execBody.memChair.classification}}
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Major: </span> 
+                                Major goes here 
+                            </h5>
+                            <h5 class="card-title">
+                                <span style="font-weight: bold;">Hometown: </span> 
+                                Hometown 
+                            </h5>
+                            <p class="card-text">{{execBody.memChair.bio}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

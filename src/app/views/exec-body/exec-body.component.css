@@ -1,0 +1,71 @@
+#execs{
+    margin-top: 2vh;
+
+}
+
+#execs h1{
+    color: white;
+    margin-bottom: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#execs .card{
+    background-color: rgba(255, 255, 255, 0.678);
+    border: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#execs .card-img {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#execs .card .col-md-4{
+    background-position: center; 
+    background-size: cover;
+}
+
+.card h5 {
+    margin: 0;
+}
+
+.card p{
+    margin-top: 1em;
+}
+.card h4{
+    font-weight: bold;
+}
+
+.card h3{
+}
+
+.position-title{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.exec-row{
+    margin-bottom: 3em;
+    
+}
+
+.stack-img{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .stack-img{
+        display: block;
+    }
+
+    .stack-img img{
+        max-width: 100%;
+    }
+  }
+
+
