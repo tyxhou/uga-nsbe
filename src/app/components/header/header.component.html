@@ -51,7 +51,9 @@
                             <div class="divider"></div>
                             <div class="become-member">
                                 <h3>Want to become a member?</h3>
-                                <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
+                                <a id="find-out-link" href="#desc-pics">
+                                    <button class="btn btn-lg btn-primary btn-block find-out">Find out how</button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -73,8 +75,8 @@
                             <button class="btn btn-lg btn-primary btn-block sign-in-button">Check In</button>
                         </div>
                         <div class="row justify-content-center align-items-center edit-profile">
-                            <button class="btn btn-lg btn-primary btn-block sign-in-button">Edit Profile</button>
-                        </div> 
+                            <button [routerLink]="['/edit-profile']"(click)="setUserToEdit()" class="btn btn-lg btn-primary btn-block sign-in-button">Edit Profile</button>
+                        </div>
                         <div (click)="logOut()" class="row logout justify-content-center align-items-center">
                             <button class="btn btn-lg btn-danger btn-block sign-in-button">Log Out</button>
                         </div>
@@ -99,13 +101,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLongTitle">Admin Controls</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button #adminClose type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <div (signedIn)=signIn($event) class="row justify-content-center align-items-center admin-wrapper">
-                    <button class="btn btn-lg btn-primary btn-block">
+                    <button class="btn btn-lg btn-primary btn-block" [routerLink]="['/manage-users']">
                         <h3>Manage Users</h3>
                     </button>
                     <button class="btn btn-lg btn-primary btn-block">
@@ -113,6 +115,9 @@
                     </button>
                     <button class="btn btn-lg btn-primary btn-block">
                         <h3>Manage Executives</h3>
+                    </button>
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <h3>Manage Resources</h3>
                     </button>
                     <button class="btn btn-lg btn-primary btn-block">
                         <h3>Manage Content</h3>

@@ -20,7 +20,7 @@ export class HomeComponent{
   loggedInUser: UserInterface = null;
   loggedIn: Boolean;
   
-  constructor(private userService:UsersService) { }
+  constructor(public userService:UsersService) { }
 
   faGraduationCap = faGraduationCap;
   faBriefcase = faBriefcase;

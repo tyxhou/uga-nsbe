@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {nsbeUser} from '../entities/nsbeUser'
-import { UserInterface } from '../interfaces/UserInterface';
+import { UserInterface } from '../interfaces-enums/UserInterface';
 import { CookieService } from 'ngx-cookie-service';
 
 
@@ -15,6 +15,7 @@ export class UsersService {
   users: nsbeUser[] = [];
   loggedIn: boolean;
   loggedInUser: UserInterface;
+  userToEdit: UserInterface;
 
   public getloggedInUser(): UserInterface {
     return this.loggedInUser;
@@ -24,14 +25,14 @@ export class UsersService {
   }
 
   constructor(private cookieService: CookieService) { 
-    var user1 = new nsbeUser("Tyler", "Houston",'tah15398@uga.edu', "tah15398", 10, "1234", true);
-    var user2 = new nsbeUser("Mike", "Jones",'tah15398@uga.edu', "mak28723", 0, "1234", false);
-    var user3 = new nsbeUser("John", "Doe",'tah15398@uga.edu', "jag23442", 3, "1234", false);
-    var user4 = new nsbeUser("Jane", "Deer",'tah15398@uga.edu', "jcr28743", 2, "1234", false);
+    let user1 = new nsbeUser("Tyler", "Houston",'tah15398@uga.edu', "tah15398", 10, "1234", true);
+    let user2 = new nsbeUser("Mike", "Jones",'tah15398@uga.edu', "mak28723", 0, "1234", false);
+    let user3 = new nsbeUser("John", "Doe",'tah15398@uga.edu', "jag23442", 3, "1234", false);
+    let user4 = new nsbeUser("Jane", "Deer",'tah15398@uga.edu', "jcr28743", 2, "1234", false);
     this.users.push(user1, user2, user3, user4);
     this.cookieService.get("user") ?  this.setUserOnPageLoad() : this.loggedIn = false;
     if (this.loggedIn){
-      console.log("user from user service:" + this.loggedInUser.fname);
+      console.log("user from user service: " + this.loggedInUser.fname);
     }
     else{
       console.log("Nobody logged in from user service");
@@ -49,6 +50,21 @@ export class UsersService {
       }
     }
     return this.failUser
+  }
+
+  public returnUserInterfaces(): UserInterface[]{
+    let userInterfaces: UserInterface[] = [];
+    this.users.forEach(user => {
+      let newUser: UserInterface = {
+        fname: user.fName,
+        lname: user.lName,
+        email: user.email,
+        points: user.points.valueOf(),
+        admin: user.admin
+      } 
+      userInterfaces.push(newUser);
+    });
+    return userInterfaces;
   }
 
   //returns an object with the necessary information to the home component, creates user information cookie for .3 days

@@ -29,7 +29,7 @@ export class ExecBodyComponent implements OnInit {
   numRows: number[] = [];
   linkedin = linkedin;
 
-  constructor(private execsService: ExecsService, private _sanitizer: DomSanitizer) { }
+  constructor(public execsService: ExecsService, private _sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.execBody = this.execsService.getExecBody();

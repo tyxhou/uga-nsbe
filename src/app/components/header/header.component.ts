@@ -1,9 +1,9 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import {UsersService} from '../../services/users.service'
 import { nsbeUser } from 'src/app/entities/nsbeUser';
 import { HomeComponent } from '../../views/home/home.component';
-import { UserInterface } from '../../interfaces/UserInterface';
+import { UserInterface } from '../../interfaces-enums/UserInterface';
 
 
 @Component({
@@ -15,14 +15,13 @@ export class HeaderComponent implements OnInit {
   @Output () signedIn: EventEmitter<nsbeUser> = new EventEmitter();
   @Output () logout: EventEmitter<null> = new EventEmitter();
 
-
   myId: String = '';
   password: String = '';
   user: nsbeUser;
   loggedIn: boolean;
   loggedInUser: UserInterface;
 
-  constructor(private userService:UsersService, private homeComponent: HomeComponent) { }
+  constructor(public userService:UsersService, private homeComponent: HomeComponent) { }
 
   faArrowDown = faArrowDown;
 
@@ -57,6 +56,12 @@ export class HeaderComponent implements OnInit {
   //lets home component knoe the user has clicked logout
   logOut(): void{
     this.logout.emit();
+  }
+
+  setUserToEdit(){
+    this.userService.userToEdit = this.loggedInUser;
+    console.log(this.userService.userToEdit.fname);
+    document.getElementsByClassName("modal-backdrop")[0].remove();
   }
 
 }

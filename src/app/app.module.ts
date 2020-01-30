@@ -9,7 +9,10 @@ import { HeaderComponent } from '../app/components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
 import { CookieService } from 'ngx-cookie-service';
-import { UsersService } from './services/users.service'
+import { UsersService } from './services/users.service';
+import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
+import { ResourcesComponent } from './views/resources/resources.component';
+import { ManageUsersComponent } from './views/admin/manage-users/manage-users.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { UsersService } from './services/users.service'
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    routingComponents
+    routingComponents,
+    EditProfileComponent,
+    ResourcesComponent,
+    ManageUsersComponent,
   ],
   imports: [
     BrowserModule,
