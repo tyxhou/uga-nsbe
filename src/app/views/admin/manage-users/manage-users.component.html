@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+<section id="manage-users">
+    <h1>Manage Users</h1>
+    <table class="users-table table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Points</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let user of users; index as i">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{user.fname}}&nbsp;{{user.lname}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.points}}</td>
+                    <td>
+                        <p *ngIf="user.admin">&#10004;</p>
+                    </td>
+                    <td><a (click)="setUserToEdit(user)" [routerLink]="['/edit-profile']">Edit</a></td>
+                </tr>
+        </tbody>
+    </table>
+</section>

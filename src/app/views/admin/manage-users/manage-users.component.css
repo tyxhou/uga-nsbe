@@ -1,0 +1,20 @@
+section{
+    margin: 3vh;
+    padding: 2.5em;
+    border-radius: .3vw;
+    width: 100%;
+}
+
+#manage-users{
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.users-table{
+    margin-top: 3vh;
+    text-align: center
+}
+
+.users-table p{
+    margin: 0;
+}
+
