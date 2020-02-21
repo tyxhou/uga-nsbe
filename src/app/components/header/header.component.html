@@ -107,7 +107,7 @@
             </div>
             <div class="modal-body">
                 <div (signedIn)=signIn($event) class="row justify-content-center align-items-center admin-wrapper">
-                    <button class="btn btn-lg btn-primary btn-block" [routerLink]="['/manage-users']">
+                    <button class="btn btn-lg btn-primary btn-block" (click)="closeModal()" [routerLink]="['/manage-users']">
                         <h3>Manage Users</h3>
                     </button>
                     <button class="btn btn-lg btn-primary btn-block">

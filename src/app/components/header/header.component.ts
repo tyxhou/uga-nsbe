@@ -61,7 +61,12 @@ export class HeaderComponent implements OnInit {
   setUserToEdit(){
     this.userService.userToEdit = this.loggedInUser;
     console.log(this.userService.userToEdit.fname);
-    document.getElementsByClassName("modal-backdrop")[0].remove();
+  }
+
+  closeModal(){
+    $(document).ready(function(){    
+      $("#admin-controls").click();  // That's it... Model will close. 
+  });
   }
 
 }
