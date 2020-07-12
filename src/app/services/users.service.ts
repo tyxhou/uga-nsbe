@@ -24,8 +24,8 @@ export class UsersService {
     this.loggedInUser = value;
   }
 
-  constructor(private cookieService: CookieService) { 
-    let user1 = new nsbeUser("Tyler", "Houston",'tah15398@uga.edu', "tah15398", 10, "1234", true);
+  constructor(private cookieService: CookieService) {
+    let user1 = new nsbeUser("Tyler", "Houston",'tah15398@uga.edu', "tah15398", 15, "1234", true);
     let user2 = new nsbeUser("Mike", "Jones",'tah15398@uga.edu', "mak28723", 0, "1234", false);
     let user3 = new nsbeUser("John", "Doe",'tah15398@uga.edu', "jag23442", 3, "1234", false);
     let user4 = new nsbeUser("Jane", "Deer",'tah15398@uga.edu', "jcr28743", 2, "1234", false);
@@ -39,7 +39,7 @@ export class UsersService {
     }
   }
 
-  //right now, this method recives a myID and password, and checks for a match in an array of users 
+  //right now, this method recives a myID and password, and checks for a match in an array of users
   //held in this service. iF there is a match, that user is returned
   //eventually this will use the database instead of some fake created users
   public attemptLogin(myId: String, password: String) : nsbeUser{
@@ -61,7 +61,7 @@ export class UsersService {
         email: user.email,
         points: user.points.valueOf(),
         admin: user.admin
-      } 
+      }
       userInterfaces.push(newUser);
     });
     return userInterfaces;
@@ -76,7 +76,7 @@ export class UsersService {
       email: user.email,
       points: user.points.valueOf(),
       admin: user.admin
-    } 
+    }
     this.setloggedInUser(newUser);
     this.cookieService.set("user", JSON.stringify(this.loggedInUser), .3);
     this.loggedIn = true;
@@ -99,9 +99,5 @@ export class UsersService {
     this.loggedIn = false;
     this.loggedInUser = null;
   }
-  
+
 }
-
-
-
-
